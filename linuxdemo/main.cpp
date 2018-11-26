@@ -15,6 +15,12 @@ int add(int x, int y)
 	return x + y;
 }
 
+//sub function
+int sub(int x, int y)
+{
+	return x - y;
+}
+
 //initPeople 
 bool initPeople(ST_PEOPLE *people, int age, char sex, char *addr, unsigned int addrLen)
 {
@@ -32,11 +38,6 @@ bool initPeople(ST_PEOPLE *people, int age, char sex, char *addr, unsigned int a
 	return true;
 }
 
-//sub function
-int sub(int x, int y)
-{
-	return x - y;
-}
 
 char addr[10][3] = { "aa" , "bb", "cc", "dd", "ee", "ff", "xx", "cc", "vv", "bb" };
 char mm[2][4] = { {"abc"}, {"def"} };
