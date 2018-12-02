@@ -1,5 +1,9 @@
 #include <cstdio>
 #include <string.h>
+#include <unistd.h>
+
+#include "calc.h"
+
 
 //data struct
 typedef struct people
@@ -46,7 +50,9 @@ char mm[2][4] = { {"abc"}, {"def"} };
 int main()
 {
 	int sum = 0;
-
+	int printCnt = 0;
+	int addCnt = 0;
+	int subCnt = 0;
 	ST_PEOPLE peoples[10];
 
 	sum = add(3, 4);
@@ -70,6 +76,22 @@ int main()
 		}
 			
 	}
+
+	while (1)
+	{
+#if 0
+		printf("printf now is %d\n", printCnt);
+		printCnt++;
+#endif
+		calc_add(addCnt, addCnt + 1);
+		addCnt++;
+
+		calc_sub(subCnt + 1, subCnt);
+		subCnt++;
+
+		sleep(1);
+	}
+
 
 	return 0;
 }
